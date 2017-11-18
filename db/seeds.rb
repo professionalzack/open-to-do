@@ -14,6 +14,8 @@ include Faker
     password: Faker::Internet.password
     )
 end
+
+
 users = User.all
 
 10.times do
