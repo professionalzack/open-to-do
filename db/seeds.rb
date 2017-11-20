@@ -11,7 +11,7 @@ include Faker
 5.times do
     user = User.create!(
     username: Faker::Name.unique.last_name,
-    password: Faker::Internet.password
+    password: "banana"
     )
 end
 
