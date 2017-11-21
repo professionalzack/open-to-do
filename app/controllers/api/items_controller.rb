@@ -5,7 +5,6 @@ class Api::ItemsController < ApiController
         items = Item.all
         list = List.find(params[:list_id])
         item = list.items.new(item_params)
-        user = User.find(params[:user_id])
 
         if item.save
             render json: item
@@ -13,6 +12,8 @@ class Api::ItemsController < ApiController
             render json: { errors: item.errors.full_messages }, status: :unprocessable_entity
         end
     end
+
+    
 
     private
     def item_params
