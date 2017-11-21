@@ -29,9 +29,9 @@ lists = List.all
 
 50.times do
    item = Item.create!(
-     user:  users.sample,
      list:  lists.sample,
-     title:  Faker::Lovecraft.fhtagn
+     title:  Faker::Lovecraft.fhtagn,
+     completed: false
    )
 end
 
